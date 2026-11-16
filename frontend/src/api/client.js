@@ -1,2 +1,4 @@
 export async function api(path,options={}){const token=localStorage.getItem('token');let r=await fetch('/api'+path,{...options,headers:{'Content-Type':'application/json',...(token?{Authorization:'Bearer '+token}:{}),...options.headers}});if(!r.ok){let e=await r.json().catch(()=>({detail:r.statusText}));throw Error(typeof e.detail==='string'?e.detail:JSON.stringify(e.detail))}return r.json()}
 export const post=(path,data)=>api(path,{method:'POST',body:JSON.stringify(data)});
+export const put=(path,data)=>api(path,{method:'PUT',body:JSON.stringify(data)});
+export const state={user:null,events:[],segments:[],cohorts:[],interventions:[],selected:null,cell:null,mergeBasis:null,ledgerMonths:[],ledgerEntries:[],corrections:[],settlements:[]};

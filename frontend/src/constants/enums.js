@@ -1,1 +1,1 @@
-export const COURSES=['数据素养','服务沟通','安全规范'];export const ROLES=['admin','analyst','viewer'];export const STATES=['queued','running','done','failed'];export const STAGES=['draft','approved'];
+export const COURSES=['数据素养','服务沟通','安全规范'];export const ROLES=['admin','analyst','viewer'];export const STATES=['queued','running','done','failed'];export const STAGES=['draft','approved'];export const SCHEMES=[['click','点击方案（旧·保留）'],['segment','时段方案（新·冻结时段）']];export const LEDGER_STATES=['pending','posting','posted'];
